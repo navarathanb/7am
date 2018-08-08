@@ -1,0 +1,62 @@
+<div *ngIf = 'result'>
+<h1>Hello {{name}}</h1>
+  <h2>Value : {{value}}</h2>
+  <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+      <td>Name</td><td>Email</td><td>Mobile</td><td>ID</td>
+    </tr>
+    <tr *ngFor = 'let data of students'>
+      <td>{{data.name}}</td><td>{{data.email}}</td><td>{{data.mobile}}</td><td>{{data.id}}</td>
+    </tr>
+  </table>
+</div> 
+<div>
+  <h2>ProductS Details</h2>
+  <div class="products">
+    <div class="product" *ngFor = 'let product of products'>
+      <img src="{{product.image}}" alt="" class="image">
+      <h2 class="title">{{product.pname}}</h2>
+      <h3 class="costRev">
+        <span>{{product.pcost}}</span>
+        <span *ngIf='product.review == 1'>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="fas fa-star"></i>
+        </span>
+        <span *ngIf='product.review == 2'>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </span>
+        <span *ngIf='product.review == 3'>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </span>
+        <span *ngIf='product.review == 4'>
+          <i class="far fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </span>
+        <span *ngIf='product.review == 5'>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+         
+        </span>
+      </h3>
+      <a href="#" class="cart">Add to Cart</a>
+    </div>
+  </div>
+  
+</div> 
